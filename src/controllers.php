@@ -137,7 +137,7 @@ $app->match('/logout', function () use ($app) {
 
     return $app->redirect($app['url_generator']->generate('homepage'));
 })->bind('logout');
-
+git merge origin master
 $app->get('/page-with-cache', function () use ($app) {
     $response = new Response($app['twig']->render('page-with-cache.html.twig', array('date' => date('Y-M-d h:i:s'))));
     $response->setTtl(10);
